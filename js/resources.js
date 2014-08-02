@@ -1,6 +1,15 @@
 game.resources = [
 
-    {name: "ScreenGirl", type:"image", src: "data/img/screengirl.png"}
+    {
+        name: "ScreenGirl",
+        type:"image",
+        src: "data/img/screengirl.png"
+    },
+    {
+        name: "bgColor2",
+        type: "image",
+        src: "data/img/bg_color2.png"
+    }
 	/* Graphics. 
 	 * @example
 	 * {name: "example", type:"image", src: "data/img/example.png"},
