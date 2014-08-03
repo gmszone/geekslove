@@ -24,7 +24,10 @@ var game = {
 
 	"loaded" : function () {
         me.state.set(me.state.PLAY, new game.PlayScreen());
-
+        me.input.bindKey(me.input.KEY.LEFT,  "left");
+        me.input.bindKey(me.input.KEY.RIGHT, "right");
+        me.input.bindKey(me.input.KEY.UP,  "up");
+        me.input.bindKey(me.input.KEY.DOWN,  "down");
         me.state.change(me.state.PLAY);
 
 	}
