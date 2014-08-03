@@ -1,15 +1,10 @@
 game.resources = [
 
-    {
-        name: "ScreenGirl",
-        type:"image",
-        src: "data/img/screengirl.png"
-    },
-    {
-        name: "bgColor2",
-        type: "image",
-        src: "data/img/bg_color2.png"
-    }
+    {name: "ScreenGirl",type:"image",src: "data/img/screengirl.png"},
+    {name: "bgColor2",type: "image",src: "data/img/bg_color2.png"},
+    {name : 'smoke',src : 'data/img/smoke.png',type : 'image'},
+    {name : 'rain', src : 'data/img/rain.png', type : 'image'}
+
 	/* Graphics. 
 	 * @example
 	 * {name: "example", type:"image", src: "data/img/example.png"},
