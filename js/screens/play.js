@@ -10,7 +10,8 @@ game.PlayScreen = me.ScreenObject.extend({
         me.game.world.addChild(screenGirl);
         me.game.world.addChild(new me.ImageLayer("bgColor2", 960, 480, "bgColor2", 2, 1));
 
-        me.game.world.addChild(new game.TextLogo(me.video.getWidth(), me.video.getHeight()), 4);
+        console.log(me);
+        me.game.world.addChild(new TextLogo(me.video.renderer.getWidth(), me.video.renderer.getHeight()), 4);
 //        me.game.world.addChild(new game.rain(120, 10));
 
         this.HUD = new game.HUD.Container();

@@ -5,7 +5,7 @@ var game = {
 	},
 	
 	"onload" : function () {
-	if (!me.video.init("screen", 960, 640, true, 'auto')) {
+	if (!me.video.init("screen", me.video.CANVAS, 960, 640, true, 'auto')) {
 		alert("您当前的浏览器并不支持 HTML5 canvas.");
 		return;
 	}

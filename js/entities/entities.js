@@ -61,22 +61,23 @@ game.smoke = me.Renderable.extend({
     }
 });
 
-game.TextLogo = me.Renderable.extend({
+TextLogo = me.Renderable.extend({
+
     init: function(w, h) {
-        this.parent(new me.Vector2d(), w, h);
+        me.Renderable.prototype.init.apply(this, [0, 0, w, h]);
         this.logo1 = new me.Font("Arial", 64, "black", "middle");
         this.logo2 = new me.Font("Arial", 64, "red", "middle");
     },
 
-    draw: function(context) {
+    draw: function(renderer) {
         var geekText = "极客";
         var loveText = "爱情";
-        var logo1_width = this.logo1.measureText(context, geekText).width;
-        var xpos = (this.width - logo1_width - this.logo2.measureText(context, "JS").width) / 2;
-        var ypos = (this.height / 2) + (this.logo2.measureText(context, "melon").height);
-        this.logo1.draw(context, geekText, xpos, ypos);
+        var logo1_width = renderer.measureText(this.logo1, geekText).width;
+        var xpos = (this.width - logo1_width - renderer.measureText(this.logo1, "JS").width) / 2;
+        var ypos = (this.height / 2) + (renderer.measureText(this.logo2, "melon").height);
+        renderer.drawFont(this.logo1, geekText, xpos, ypos);
         xpos += logo1_width;
-        this.logo2.draw(context, loveText, xpos, ypos);
+        renderer.drawFont(this.logo2, loveText, xpos, ypos);
     }
 
 });
