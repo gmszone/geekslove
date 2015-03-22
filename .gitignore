@@ -4,4 +4,8 @@ build/designiot.pdf
 Makefile.old
 build/pdf.html
 www/assets
+resources/
+platforms/
+plugins/
+www/lib
 node_modules
