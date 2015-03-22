@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic','hc.marked', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic','ngCordova', 'hc.marked', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -9,6 +9,12 @@ angular.module('starter', ['ionic','hc.marked', 'starter.controllers', 'starter.
       StatusBar.styleDefault();
     }
   });
+})
+
+.run(function($cordovaSplashscreen) {
+	setTimeout(function() {
+		$cordovaSplashscreen.hide()
+	}, 2000)
 })
 
 .config(['markedProvider', function (markedProvider) {
