@@ -23,14 +23,7 @@ angular.module('starter.controllers', [])
     $scope.blog = Blog.get($stateParams.blogId);
 })
 
-.controller('AccountCtrl', function ($scope, $log, $cordovaOauth, $cordovaEmailComposer) {
-  $scope.share = function () {
-    $cordovaOauth.github("CLIENT_ID_HERE", ["email"]).then(function (result) {
-      // results
-    }, function (error) {
-      // error
-    });
-  };
+.controller('AccountCtrl', function ($scope, $log, $cordovaEmailComposer) {
   $scope.sendMail = function () {
     $cordovaEmailComposer.isAvailable().then(function () {
     }, function () {

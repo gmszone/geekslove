@@ -2,6 +2,7 @@ angular.module('starter', ['ionic', 'ngCordova', 'hc.marked', 'starter.controlle
 
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
+      window.umappkey = '528dc5aa56240bb52f02343c';
       if (window.cordova && window.cordova.plugins.Keyboard) {
         cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       }
