@@ -17,6 +17,7 @@
   "cordovaPlugins": [
     "org.apache.cordova.splashscreen",
     "org.pushandplay.cordova.apprate",
-    "org.apache.cordova.dialogs"
+    "org.apache.cordova.dialogs",
+    "nl.x-services.plugins.socialsharing"
   ]
 }

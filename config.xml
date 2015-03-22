@@ -2,14 +2,13 @@
 <widget id="com.phodal.geekslove" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" versionCode="101">
   <name>极客爱情</name>
   <description>
-  “你爱我吗？”
-  “比爱1024还爱你。”
+  “待我代码编成，娶你为妻可好。”
+
   她是一名文学专业的才女，他是一名资深的极客。
   从相遇相识到相知相爱，他们爱情的每一步都写满极客世界的传奇。
   平凡的爱情都是相似的，平凡的爱情也各有各的不同。和一个技术宅男谈恋爱，则更需要满满的战斗力。杀得了木马过得了防火墙不说，更需要斗得过电脑小三，打得过鼠标小强。
   他们的爱情，就这样开始、并且继续着。
 
-  想知道和程序员谈恋爱是一种什么样的体验吗？答案尽在《极客爱情》
   </description>
   <author email="h@phodal.com" href="http://www.phodal.com/">
     Phodal Huang
