@@ -3,7 +3,18 @@
     <div class="card">
       <div class="item item-body">
         <div marked ng-include="'assets/about.md'"></div>
+
+        <p>
+          联系我: <a href="#" ng-click="sendMail()">
+          <i class="ion-ios-email-outline"></i>hug8217@qq.com</a>
+        </p>
       </div>
     </div>
+      <div class="card">
+        <div class="item">
+          <button class="button button-block button-positive" ng-click="share()"> Hello
+          </button>
+        </div>
+      </div>
   </ion-content>
 </ion-view>

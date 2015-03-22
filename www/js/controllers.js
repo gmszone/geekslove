@@ -23,6 +23,28 @@ angular.module('starter.controllers', [])
     $scope.blog = Blog.get($stateParams.blogId);
 })
 
-.controller('AccountCtrl', function($scope, $log, $cordovaAppRate) {
-  $scope.words = '';
+.controller('AccountCtrl', function ($scope, $log, $cordovaOauth, $cordovaEmailComposer) {
+  $scope.share = function () {
+    $cordovaOauth.github("CLIENT_ID_HERE", ["email"]).then(function (result) {
+      // results
+    }, function (error) {
+      // error
+    });
+  };
+  $scope.sendMail = function () {
+    $cordovaEmailComposer.isAvailable().then(function () {
+    }, function () {
+    });
+
+    var email = {
+      to: 'hug8217@qq.com',
+      subject: '',
+      body: '',
+      isHtml: true
+    };
+
+    $cordovaEmailComposer.open(email).then(null, function () {
+      // user cancelled email
+    });
+  }
 });
