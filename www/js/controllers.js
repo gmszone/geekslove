@@ -1,12 +1,45 @@
 angular.module('starter.controllers', [])
 
-.controller('HomeCtrl', function($scope) {})
+  .controller('HomeCtrl', function ($scope, $ionicPopover) {
+    $ionicPopover.fromTemplateUrl('templates/more.html', {
+      scope: $scope
+    }).then(function (popover) {
+      $scope.popover = popover;
+    });
 
-.controller('BlogCtrl', function($scope, Blog) {
-  $scope.blogs = Blog.all();
-})
+    $scope.openPopover = function ($event) {
+      $scope.popover.show($event);
+    };
 
-.controller('LikeCtrl', function($scope, $cordovaAppRate) {
+    $scope.closePopover = function () {
+      $scope.popover.hide();
+    };
+
+    $scope.$on('$destroy', function () {
+      $scope.popover.remove();
+    });
+
+    $scope.$on('popover.hidden', function () {
+
+    });
+
+    $scope.$on('popover.removed', function () {
+    });
+  })
+
+  .controller('PopoverCtrl', function ($scope, $ionicPopover) {
+
+  })
+
+  .controller('BlogCtrl', function ($scope, Blog) {
+    $scope.blogs = Blog.all();
+  })
+
+  .controller('CopyRightCtrl', function () {
+
+  })
+
+  .controller('LikeCtrl', function ($scope, $cordovaAppRate) {
     $scope.promptRating = function () {
       $cordovaAppRate.promptForRating(true).then(function (result) {
         console.log("result: " + result);
@@ -15,29 +48,28 @@ angular.module('starter.controllers', [])
         $scope.words = result;
       })
     };
-})
+  })
 
 
-.controller('BlogDetailCtrl', function($scope, $stateParams, Blog) {
-    $scope.md ='assets/' + $stateParams.blogId + '.md';
+  .controller('BlogDetailCtrl', function ($scope, $stateParams, Blog) {
+    $scope.md = 'assets/' + $stateParams.blogId + '.md';
     $scope.blog = Blog.get($stateParams.blogId);
-})
+  })
 
-.controller('AccountCtrl', function ($scope, $log, $cordovaEmailComposer) {
-  $scope.sendMail = function () {
-    $cordovaEmailComposer.isAvailable().then(function () {
-    }, function () {
-    });
+  .controller('AccountCtrl', function ($scope, $log, $cordovaEmailComposer) {
+    $scope.sendMail = function () {
+      $cordovaEmailComposer.isAvailable().then(function () {
+      }, function () {
+      });
 
-    var email = {
-      to: 'hug8217@qq.com',
-      subject: '',
-      body: '',
-      isHtml: true
-    };
+      var email = {
+        to: 'hug8217@qq.com',
+        subject: '',
+        body: '',
+        isHtml: true
+      };
 
-    $cordovaEmailComposer.open(email).then(null, function () {
-      // user cancelled email
-    });
-  }
-});
+      $cordovaEmailComposer.open(email).then(null, function () {
+      });
+    }
+  });
