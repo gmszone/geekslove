@@ -1,0 +1,7 @@
+.idea/*
+build/iot.pdf
+build/designiot.pdf
+Makefile.old
+build/pdf.html
+www/assets
+node_modules
