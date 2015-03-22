@@ -88,11 +88,11 @@ angular.module('starter.services', [])
 	  },
 	  {
 		  id: 21,
-		  name: "番外之一 爱情中的那些碎段子"
+		  name: "番外之一： 爱情中的那些碎段子"
 	  },
 	  {
 		  id: 22,
-		  name: "番外之二 程序员如何邂逅真爱之伪攻略篇"
+		  name: "番外之二： 程序员如何邂逅真爱之伪攻略篇"
 	  }];
 
   return {
