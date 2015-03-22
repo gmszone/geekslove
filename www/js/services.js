@@ -1,64 +1,99 @@
 angular.module('starter.services', [])
 
 .factory('Blog', function($http, $q) {
-  var blogs = [{
-    id: 0,
-    name: '序'
-  }, {
-    id: 1,
-    name: '无处不在的HTML'
-  }, {
-    id: 2,
-    name: '无处不在的Javascript'
-  }, {
-    id: 3,
-    name: '无处不在的CSS'
-  }, {
-    id: 4,
-    name: '无处不在的三剑客'
-  },{
-    id: 5,
-    name: 'GNU/Linux 强大且Free'
-  }, {
-    id: 6,
-    name: 'Arduino 极客的玩具'
-  }, {
-    id: 8,
-    name: 'Raspberry Pi'
-  }, {
-    id: 9,
-    name: 'Server 一切皆为服务'
-  }, {
-    id: 10,
-    name: 'Web服务'
-  }, {
-    id: 11,
-    name: 'HTTP 熟悉&陌生'
-  }, {
-    id: 12,
-    name: '设计RESTful API'
-  }, {
-    id: 13,
-    name: '环境准备'
-  }, {
-    id: 14,
-    name: '创建REST服务'
-  },{
-    id: 15,
-    name: '前端显示'
-  }, {
-    id: 16,
-    name: 'RESTful的CoAP协议'
-  }, {
-    id: 17,
-    name: '使用IoT-CoAP构建物联网'
-  }, {
-    id: 18,
-    name: '简单物联网'
-  }, {
-    id: 19,
-    name: 'Android简单示例'
-  }];
+  var blogs = [
+	  {
+		  id: 0,
+		  name: "序"
+	  },
+	  {
+	      id: 1,
+	      name: "爱它，还是爱我"
+      },
+	  {
+		  id: 2,
+		  name: "去实验室约会吧"
+	  },
+	  {
+		  id: 3,
+		  name: "我真的不是修电脑的"
+	  },
+	  {
+		  id: 4,
+		  name: "我的编程养成记"
+	  },
+	  {
+		  id: 5,
+		  name: "极客的神逻辑"
+	  },
+	  {
+		  id: 6,
+		  name: "我们的战争"
+	  },
+	  {
+		  id: 7,
+		  name: "和电脑的亲密接触"
+	  },
+	  {
+		  id: 8,
+		  name: "邋遢IT民工拯救记"
+	  },
+	  {
+		  id: 9,
+		  name: "当情书遇上技术博客"
+	  },
+	  {
+		  id: 10,
+		  name: "技术宅不解风情"
+	  },
+	  {
+		  id: 11,
+		  name: "和不会聊天的人谈恋爱"
+	  },
+	  {
+		  id: 12,
+		  name: "不想加班的程序员不是好程序员"
+	  },
+	  {
+		  id: 13,
+		  name: "技术宅的网购属性"
+	  },
+	  {
+		  id: 14,
+		  name: "找女朋友难，找工作更难"
+	  },
+	  {
+		  id: 15,
+		  name: "极客的文艺情怀"
+	  },
+	  {
+		  id: 16,
+		  name: "二十二岁开始的初恋"
+	  },
+	  {
+		  id: 17,
+		  name: "当爱情遭遇远程调试"
+	  },
+	  {
+		  id: 18,
+		  name: "基友一生一起走"
+	  },
+	  {
+		  id: 19,
+		  name: "梦想还是要有的，万一实现了呢"
+	  },
+	  {
+		  id: 20,
+		  name: "待我代码编成，娶你为妻可好"
+	  },
+	  {
+		  id: 21,
+		  name: "番外之一 爱情中的那些碎段子"
+	  },
+	  {
+		  id: 22,
+		  name: "番外之二 程序员如何邂逅真爱之伪攻略篇"
+	  }];
 
   return {
     all: function() {
