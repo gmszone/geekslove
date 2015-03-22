@@ -14,10 +14,7 @@ angular.module('starter', ['ionic','hc.marked', 'starter.controllers', 'starter.
 .config(['markedProvider', function (markedProvider) {
   markedProvider.setOptions({
     gfm: true,
-    tables: true,
-    highlight: function (code) {
-      return hljs.highlightAuto(code).value;
-    }
+    tables: true
   })
 }])
 
