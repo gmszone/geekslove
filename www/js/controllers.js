@@ -39,10 +39,6 @@ angular.module('starter.controllers', [])
     $scope.blogs = Blog.all();
   })
 
-  .controller('CopyRightCtrl', function () {
-
-  })
-
   .controller('LikeCtrl', function ($scope, $cordovaAppRate) {
     $scope.promptRating = function () {
       $cordovaAppRate.promptForRating(true).then(function (result) {
