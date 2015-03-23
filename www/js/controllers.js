@@ -35,7 +35,10 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('BlogCtrl', function ($scope, Blog) {
+  .controller('BlogCtrl', function ($scope, Blog, $cordovaStatusbar) {
+    if($cordovaStatusbar.isVisible()){
+      $cordovaStatusbar.hide();
+    }
     $scope.blogs = Blog.all();
   })
 
@@ -51,12 +54,19 @@ angular.module('starter.controllers', [])
   })
 
 
-  .controller('BlogDetailCtrl', function ($scope, $stateParams, Blog) {
+  .controller('BlogDetailCtrl', function ($scope, $stateParams, Blog, $cordovaStatusbar) {
+    $cordovaStatusbar.overlaysWebView(true);
+
+    $cordovaStatusbar.hide();
+
     $scope.md = 'assets/' + $stateParams.blogId + '.md';
     $scope.blog = Blog.get($stateParams.blogId);
   })
 
-  .controller('AccountCtrl', function ($scope, $log, $cordovaEmailComposer) {
+  .controller('AccountCtrl', function ($scope, $log, $cordovaEmailComposer, $cordovaStatusbar) {
+    if(!$cordovaStatusbar.isVisible()){
+      $cordovaStatusbar.show();
+    }
     $scope.sendMail = function () {
       $cordovaEmailComposer.isAvailable().then(function () {
       }, function () {

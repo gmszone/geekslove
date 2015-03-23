@@ -58,12 +58,6 @@ angular.module('starter', ['ionic', 'ngCordova', 'hc.marked', 'starter.controlle
         controller: "MainCtrl"
       })
 
-      .state('copyright', {
-        url: '/copyright',
-        templateUrl: 'templates/tab-copyright.html',
-        controller: 'PopoverCtrl'
-      })
-
       .state('tab.home', {
         url: '/home',
         views: {
