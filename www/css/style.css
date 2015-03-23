@@ -1,13 +1,11 @@
 /* Empty. Add your own CSS if you like */
 
-.item.homepage {
-    border: none;
+.homepage {
+  text-align: center;
+  font-size: 1.5em;
 }
 
-.item.homepage p{
-    text-align: center;
-}
-
+.homepage p,
 .item p {
     font-size: 1em;
 }
