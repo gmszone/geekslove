@@ -31,10 +31,6 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller('PopoverCtrl', function ($scope, $ionicPopover) {
-
-  })
-
   .controller('BlogCtrl', function ($scope, Blog) {
     $scope.blogs = Blog.all();
   })
