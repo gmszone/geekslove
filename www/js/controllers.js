@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-  .controller('HomeCtrl', function ($scope, $ionicPopover) {
+  .controller('MainCtrl', function ($scope, $ionicPopover) {
     $ionicPopover.fromTemplateUrl('templates/more.html', {
       scope: $scope
     }).then(function (popover) {
@@ -25,6 +25,10 @@ angular.module('starter.controllers', [])
 
     $scope.$on('popover.removed', function () {
     });
+  })
+
+  .controller('HomeCtrl', function ($scope, $ionicPopover) {
+
   })
 
   .controller('PopoverCtrl', function ($scope, $ionicPopover) {

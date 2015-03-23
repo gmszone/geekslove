@@ -54,7 +54,14 @@ angular.module('starter', ['ionic', 'ngCordova', 'hc.marked', 'starter.controlle
       .state('tab', {
         url: "/tab",
         abstract: true,
-        templateUrl: "templates/tabs.html"
+        templateUrl: "templates/tabs.html",
+        controller: "MainCtrl"
+      })
+
+      .state('copyright', {
+        url: '/copyright',
+        templateUrl: 'templates/tab-copyright.html',
+        controller: 'PopoverCtrl'
       })
 
       .state('tab.home', {
@@ -95,25 +102,6 @@ angular.module('starter', ['ionic', 'ngCordova', 'hc.marked', 'starter.controlle
           }
         }
       })
-
-      .state('tab.copyright', {
-        url: '/copyright',
-        views: {
-          'tab-account': {
-            templateUrl: 'templates/tab-copyright.html',
-            controller: 'CopyRightCtrl'
-          }
-        }
-      })
-
-      .state('tab.popover', {
-        url: '/popover',
-        views: {
-          'tab-popover': {
-            controller: 'PopoverCtrl'
-          }
-        }
-      });
 
     $urlRouterProvider.otherwise('/tab/home');
 
